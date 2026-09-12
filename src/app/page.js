@@ -1,14 +1,21 @@
 import LoginBtn from "@/Components/LoginRelative/LoginBtn";
+import UserCard from "@/Components/UsersCards/UserCard";
+import { getServerSession } from "next-auth";
 import Link from "next/link";
 import React from "react";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiAuth0, SiMongodb } from "react-icons/si";
+import { authOptions } from "./api/auth/[...nextauth]/route";
 
-const Page = () => {
+const HomePage =async () => {
+  //? Backend Api;
+  const session =await getServerSession(authOptions);
   return (
     <div className="min-h-screen flex items-center justify-center bg-base-200">
       <div className="text-center max-w-2xl px-4">
+        {/* Session code here */}
+        <UserCard></UserCard>
 
         {/* Tech Stack Icons */}
         <div className="flex justify-center gap-6 text-6xl mb-8">
@@ -45,15 +52,16 @@ const Page = () => {
           <Link href="/register" className="btn btn-primary">
             Register
           </Link>
-
-          {/* <Link href="/login" className="btn btn-outline btn-primary">
-            Login
-          </Link> */}
           <LoginBtn></LoginBtn>
         </div>
+        
+          {/* Backend api */}
+          <h1 className="text-2xl font-bold my-4">Backend</h1>
+          <h2>{JSON.stringify(session)}</h2>
       </div>
+
     </div>
   );
 };
 
-export default Page;
+export default HomePage;
