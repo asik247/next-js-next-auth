@@ -1,3 +1,4 @@
+import LoginBtn from "@/Components/LoginRelative/LoginBtn";
 import Link from "next/link";
 import React from "react";
 import { FaReact } from "react-icons/fa";
@@ -45,9 +46,10 @@ const Page = () => {
             Register
           </Link>
 
-          <Link href="/login" className="btn btn-outline btn-primary">
+          {/* <Link href="/login" className="btn btn-outline btn-primary">
             Login
-          </Link>
+          </Link> */}
+          <LoginBtn></LoginBtn>
         </div>
       </div>
     </div>
