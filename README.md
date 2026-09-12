@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Authentication App
 
-## Getting Started
+A modern authentication system built with **Next.js**, **NextAuth.js**, **MongoDB**, and **Tailwind CSS**.
 
-First, run the development server:
+## 🚀 Features
+
+* User Authentication with NextAuth.js
+* Google Login
+* GitHub Login
+* Protected Routes
+* Session Management
+* MongoDB Database Integration
+* Responsive UI with Tailwind CSS
+* Server Components Support
+* App Router Support
+
+## 🛠️ Technologies Used
+
+* Next.js 16
+* NextAuth.js
+* MongoDB
+* Tailwind CSS
+* React
+* JavaScript
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/your-repository.git
+```
+
+Go to the project directory:
+
+```bash
+cd your-repository
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔑 Environment Variables
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create a `.env.local` file in the root directory and add:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+MONGODB_URI=your_mongodb_connection_string
 
-## Learn More
+AUTH_SECRET=your_secret_key
 
-To learn more about Next.js, take a look at the following resources:
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+GITHUB_ID=your_github_client_id
+GITHUB_SECRET=your_github_client_secret
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Project Structure
 
-## Deploy on Vercel
+```bash
+src/
+├── app/
+├── components/
+├── lib/
+├── providers/
+├── actions/
+└── middleware.js
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔒 Authentication Flow
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. User clicks Sign In
+2. NextAuth handles authentication
+3. User session is created
+4. Protected pages verify session
+5. Authenticated users access private routes
+
+## 📸 Screenshots
+
+Add your project screenshots here.
+
+## 🌐 Live Demo
+
+```text
+https://your-project.vercel.app
+```
+
+## 👨‍💻 Author
+
+**Md Asik**
+
+* GitHub: https://github.com/asik247
+* LinkedIn: https://linkedin.com/in/asik5893
+
+## ⭐ Support
+
+If you like this project, give it a star on GitHub.

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Next Auth",
-  description: "Authentragration using next auth",
+  description: "Authentication using next auth",
 };
 
 export default function RootLayout({ children }) {
