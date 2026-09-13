@@ -49,21 +49,21 @@ export const authOptions = {
         async signIn({ user, account, profile, email, credentials }) {
             return true
         },
-        async redirect({ url, baseUrl }) {
-            return baseUrl
-        },
+        // async redirect({ url, baseUrl }) {
+        //     return baseUrl
+        // },
         async session({ session, user, token }) {
-            if(token){
+            if (token) {
                 session.role = token.role,
-                session.createdAt = token.createdAt
+                    session.createdAt = token.createdAt
             }
             return session
         },
         async jwt({ token, user, account, profile, isNewUser }) {
-            if(user){
-                token:user.email,
-                token.role = user.role,
-                token.createdAt = user.createdAt
+            if (user) {
+                token: user.email,
+                    token.role = user.role,
+                    token.createdAt = user.createdAt
             }
             return token
         }
