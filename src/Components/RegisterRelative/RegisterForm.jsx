@@ -1,7 +1,12 @@
 "use client";
 
+import { postUser } from "@/actions/server/auth";
+
+
+
 const RegisterForm = () => {
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const form = e.target;
@@ -16,6 +21,9 @@ const RegisterForm = () => {
         };
 
         console.log("Submitted Data:", formData);
+        const result = await postUser(formData)
+        //    console.log(result);
+        alert(result.message)
     };
 
     const inputClass =

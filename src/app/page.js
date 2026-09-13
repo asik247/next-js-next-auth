@@ -7,6 +7,7 @@ import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiAuth0, SiMongodb } from "react-icons/si";
 import { authOptions } from "./api/auth/[...nextauth]/route";
+import AuthBtns from "@/Components/AuthBtns";
 
 const HomePage =async () => {
   //? Backend Api;
@@ -48,12 +49,7 @@ const HomePage =async () => {
         </p>
 
         {/* Buttons */}
-        <div className="flex justify-center gap-4">
-          <Link href="/register" className="btn btn-primary">
-            Register
-          </Link>
-          <LoginBtn></LoginBtn>
-        </div>
+        <AuthBtns></AuthBtns>
         
           {/* Backend api */}
           <h1 className="text-2xl font-bold my-4">Backend</h1>
