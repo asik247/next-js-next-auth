@@ -6,8 +6,8 @@ import React from "react";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiAuth0, SiMongodb } from "react-icons/si";
-import { authOptions } from "./api/auth/[...nextauth]/route";
 import AuthBtns from "@/Components/AuthBtns";
+import { authOptions } from "@/lib/authOPtion";
 
 const HomePage =async () => {
   //? Backend Api;
